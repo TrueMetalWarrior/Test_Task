@@ -87,7 +87,7 @@ if __name__ == '__main__':
         connectionDB = connect(**config)    # Подключаемся к БД
         cursor = connectionDB.cursor(cursor_factory=psycopg2.extras.RealDictCursor) # Инициализируем курсор для работы с запросами SQL
                                                                                     # Используем RealDictCursor, чтобы при запросе данные выдавались в формате словаря
-        print(process_single_document())
+        print(process_single_document()) # Функция начала обработки документа, при необходимости обработать несколько документов, можно добавить цикл в начале
 
         cursor.close()
         connectionDB.close()
